@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int ERROR_DIALOG_REQUEST = 9001;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,17 +28,17 @@ public class MainActivity extends AppCompatActivity {
             init();
         }
     }
+
     private void init(){
         Button btnMap = (Button) findViewById(R.id.btnMap);
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent);
             }
         });
     }
-
 
     public boolean isServicesOK(){
         Log.d(TAG, "isServicesOK: checking google services version");
